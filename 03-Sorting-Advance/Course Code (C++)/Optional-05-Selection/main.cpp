@@ -14,7 +14,7 @@ int __partition( T arr[], int l, int r ){
     int p = rand()%(r-l+1) + l;
     swap( arr[l] , arr[p] );
 
-    int j = l; //[l+1...j] < p ; [lt+1..i) > p
+    int j = l; //[l+1...j] < p ; [j+1..i) > p 
     for( int i = l + 1 ; i <= r ; i ++ )
         if( arr[i] < arr[l] )
             swap(arr[i], arr[++j]);
